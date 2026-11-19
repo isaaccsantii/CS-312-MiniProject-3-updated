@@ -4,6 +4,16 @@ Mini-Project 1's blog, rebuilt on **PostgreSQL**. Posts are stored in a `blogs` 
 
 **Stack:** Node.js, Express.js, EJS, PostgreSQL (`pg`), `express-session`, `bcryptjs`, Bootstrap 5
 
+## Screenshots
+
+| Feed (signed in) | Editing your own post |
+|---|---|
+| ![Feed](docs/screenshots/feed.png) | ![Edit](docs/screenshots/edit.png) |
+| **Trying to edit someone else's post** | **Account page (bonus)** |
+| ![Blocked](docs/screenshots/not_your_post.png) | ![Account](docs/screenshots/account.png) |
+| **Wrong password** | **User ID already taken** |
+| ![Sign-in error](docs/screenshots/signin_error.png) | ![Sign-up error](docs/screenshots/signup_taken.png) |
+
 ## Database
 
 **Database:** `BlogDB` · **Files:** [`db/schema.sql`](db/schema.sql), [`db/seed.sql`](db/seed.sql)
