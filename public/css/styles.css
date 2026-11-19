@@ -1,0 +1,63 @@
+:root {
+  --brand: #1f4e5f;
+  --brand-dark: #163a47;
+  --accent: #e9a03b;
+  --bg: #f5f3ee;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+
+.site-nav { background: var(--brand); }
+.site-footer { color: #6c757d; }
+
+.btn-brand {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+.btn-brand:hover,
+.btn-brand:focus {
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
+  color: #fff;
+}
+
+.post-card {
+  border: 0;
+  border-left: 4px solid var(--accent);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Keep line breaks the author typed */
+.post-body { white-space: pre-wrap; }
+
+.cat-badge {
+  background: var(--accent);
+  color: #2b2b2b;
+  white-space: nowrap;
+}
+
+.empty-state {
+  border: 2px dashed #ccc;
+  color: #6c757d;
+}
+
+@media (max-width: 575.98px) {
+  main.container { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .card-body { padding: 1rem; }
+}
+
+/* Mini-Project 3 additions */
+.post-card.mine { border-left-color: var(--brand); }
+.auth-card { border: 0; border-top: 4px solid var(--accent); }

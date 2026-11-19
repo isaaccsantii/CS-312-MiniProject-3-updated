@@ -1,0 +1,20 @@
+<%# Shared form fields for create and edit. Expects `values` ({ title, content, category }). %>
+<div class="row g-3">
+  <div class="col-12">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" name="title" maxlength="255" required
+           value="<%= values.title || '' %>" />
+  </div>
+  <div class="col-12">
+    <label for="category" class="form-label">Category</label>
+    <select class="form-select" id="category" name="category">
+      <% categories.forEach(c => { %>
+        <option value="<%= c %>" <%= values.category === c ? 'selected' : '' %>><%= c %></option>
+      <% }) %>
+    </select>
+  </div>
+  <div class="col-12">
+    <label for="content" class="form-label">Post</label>
+    <textarea class="form-control" id="content" name="content" rows="6" required><%= values.content || '' %></textarea>
+  </div>
+</div>

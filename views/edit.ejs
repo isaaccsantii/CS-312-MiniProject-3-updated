@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h1 class="h4 card-title mb-1">Edit post</h1>
+        <p class="text-muted small mb-3">Originally posted <%= formatDate(post.date_created) %></p>
+        <% if (error) { %>
+          <div class="alert alert-danger py-2"><%= error %></div>
+        <% } %>
+        <form action="/posts/<%= post.blog_id %>/edit" method="POST">
+          <%- include("partials/postForm", { values: { title: post.title, content: post.body, category: post.category } }) %>
+          <div class="d-flex gap-2 mt-3">
+            <button type="submit" class="btn btn-brand">Save changes</button>
+            <a href="/" class="btn btn-outline-secondary">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer") %>
